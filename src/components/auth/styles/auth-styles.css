@@ -1,0 +1,131 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  justify-content: center;
+  width: 500px;
+}
+.login-container h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #4691DD;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "League Gothic", sans-serif;
+}
+.login-container .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 40px;
+  font-family: "League Gothic", sans-serif;
+}
+.login-container .login-form .form-group {
+  width: 75%;
+  position: relative;
+}
+.login-container .login-form .form-group input[type=text], .login-container .login-form .form-group input[type=password] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #9C9C9C;
+  font-size: 1rem;
+  color: #4691DD;
+  background: transparent;
+  outline: none;
+  font-size: 22.5px;
+  transition: all 0.3s ease;
+  font-family: "League Gothic", sans-serif;
+}
+.login-container .login-form .form-group input[type=text]:-webkit-autofill, .login-container .login-form .form-group input[type=password]:-webkit-autofill {
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #4691DD !important;
+  background-color: transparent !important;
+  -webkit-transition: background-color 9999s ease-in-out 0s;
+  transition: background-color 9999s ease-in-out 0s;
+}
+.login-container .login-form .form-group input[type=text]:-webkit-autofill:focus, .login-container .login-form .form-group input[type=password]:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #4691DD !important;
+  background-color: transparent !important;
+  -webkit-transition: background-color 9999s ease-in-out 0s;
+  transition: background-color 9999s ease-in-out 0s;
+}
+.login-container .login-form .form-group input[type=text]:focus, .login-container .login-form .form-group input[type=password]:focus {
+  background: transparent;
+  box-shadow: none;
+  border-color: #4691DD;
+}
+.login-container .login-form .form-group img {
+  height: 20px;
+  width: 20px;
+}
+.login-container .login-form .forgotPassword {
+  width: 75%;
+  text-align: right;
+  color: #4691DD;
+}
+.login-container .login-form .forgotPassword .forgot-password-link {
+  color: #4691DD;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+.login-container .login-form .login-btn {
+  width: 75%;
+  height: 50px;
+  border-radius: 25px;
+  background: #4691DD;
+  color: #fff;
+  border: none;
+  font-size: 25px;
+  font-family: "Lilita One", sans-serif !important;
+  cursor: pointer;
+  position: relative;
+  margin: 10px 0;
+}
+.login-container .login-form .login-btn .animated-login-text {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-container .login-form .login-btn .animated-login-spinner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  animation: none;
+}
+.login-container .login-form .login-btn .animated-login-spinner .spinner {
+  width: 25px;
+  height: 25px;
+}
+.login-container .create-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "League Gothic", sans-serif;
+  color: #9C9C9C;
+  margin: 20px 0;
+}
+.login-container .create-account .create-account-link {
+  color: #4691DD;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}/*# sourceMappingURL=auth-styles.css.map */

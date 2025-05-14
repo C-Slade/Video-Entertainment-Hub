@@ -1,42 +1,36 @@
 import { useState } from "react";
+import spinner_icon from "../../assets/spinner.png";
+import "./styles/auth-styles.css";
 import eye_icon_hide from "../../assets/hide-grey.png";
 import eye_icon_show from "../../assets/show-grey.png";
 import { motion } from "framer-motion";
-import spinner_icon from "../../assets/spinner.png";
-import "./styles/auth-styles.css";
 import { Link } from "react-router";
 import { useApp } from "../../context/appContext";
 
-const Login = () => {
+const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [loggingIn, setLoggingIn] = useState(false);
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
-  const { signIn, setToast } = useApp();
+  const { loadingUser, createAccount } = useApp();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setLoggingIn(true);
-
-    try {
-      await signIn(email, password);
-    } catch (error) {
-      setToast({
-        show: false,
-        message: "There was an error logging in. Please try again.",
-        type: "error",
-      });
-      console.error("Error creating account:", error);
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
     }
+
+    createAccount(email, password);
   };
 
   const togglePassword = () => setShowPassword((prev) => !prev);
+
   return (
     <>
       <div className="login-container">
-        <h2>Video Entertainment Hub Login</h2>
+        <h2>Sign Up</h2>
         <form onSubmit={handleSubmit} className="login-form">
           <div className="form-group">
             <input
@@ -53,10 +47,10 @@ const Login = () => {
             <input
               type={showPassword ? "text" : "password"}
               id="password"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
               placeholder="Password"
               name="password"
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
               required
             />
             <button
@@ -84,29 +78,35 @@ const Login = () => {
               )}
             </button>
           </div>
-          <div className="forgotPassword">
-            <Link to="/forgot-password" className="forgot-password-link">
-              Forgot Password?
-            </Link>
+          <div className="form-group">
+            <input
+              type={showPassword ? "text" : "password"}
+              id="confirm-password"
+              placeholder="Confirm Password"
+              name="password"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              value={confirmPassword}
+              required
+            />
           </div>
           <button type="submit" className="login-btn">
             <motion.div
               className="animated-login-text"
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               animate={
-                loggingIn
+                loadingUser
                   ? { scale: 0, opacity: 0, display: "none" }
                   : { scale: 1, opacity: 1 }
               }
             >
-              Login
+              Create Account
             </motion.div>
             <motion.div
               className="animated-login-spinner"
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               initial={{ scale: 0, opacity: 0 }}
               animate={
-                loggingIn
+                loadingUser
                   ? { scale: 1, opacity: 1, display: "flex" }
                   : { scale: 0, opacity: 0, display: "none" }
               }
@@ -127,9 +127,9 @@ const Login = () => {
         </form>
         <div className="create-account">
           <p>
-            Don't have an account?{" "}
-            <Link to="/createAccount" className="create-account-link">
-              Sign Up
+            Already have an account?{" "}
+            <Link to="/" className="create-account-link">
+              Sign In
             </Link>
           </p>
         </div>
@@ -138,4 +138,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

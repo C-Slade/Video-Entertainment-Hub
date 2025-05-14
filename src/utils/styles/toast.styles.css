@@ -1,0 +1,31 @@
+.toast {
+  position: absolute;
+  bottom: 25px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: "League Gothic", sans-serif;
+  color: white;
+  padding: 16px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 22px;
+  text-align: center;
+  z-index: 9999;
+}
+.toast img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.toast-success {
+  border: 1px solid #00ba00;
+}
+
+.toast-error {
+  border: 1px solid #ff0000;
+}/*# sourceMappingURL=toast.styles.css.map */
