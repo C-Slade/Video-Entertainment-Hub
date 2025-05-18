@@ -1,0 +1,636 @@
+.main-content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.main-content-container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid #D7D7D7;
+  z-index: 300 !important;
+  background: #0F0F0F;
+}
+.main-content-container header .app-name-container {
+  display: flex;
+  align-items: center;
+  width: 10%;
+  justify-content: center;
+}
+.main-content-container header .app-name-container .app-name {
+  font-size: 24px;
+  font-weight: 500;
+  color: #4691DD;
+  font-family: "League Gothic", sans-serif;
+}
+.main-content-container header .search-container {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  position: relative;
+  align-items: center;
+}
+.main-content-container header .search-container .clear-button {
+  padding: 10px;
+  color: #fff;
+  background: #0F0F0F;
+  border: none;
+  cursor: pointer;
+  font-family: "Lilita One", sans-serif;
+}
+.main-content-container header .search-container .search-input {
+  width: 25%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #D7D7D7;
+  font-size: 22px;
+  background: none;
+  color: white;
+  font-family: "League Gothic", sans-serif;
+  padding-left: 36px;
+}
+.main-content-container header .search-container .search-input::-moz-placeholder {
+  color: #9C9C9C;
+  opacity: 1;
+}
+.main-content-container header .search-container .search-input::placeholder {
+  color: #9C9C9C;
+  opacity: 1;
+}
+.main-content-container header .search-container .search-icon {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+.main-content-container header .search-container .search-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #4691DD;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Lilita One", sans-serif;
+}
+.main-content-container header .signout-container {
+  display: flex;
+  align-items: center;
+  width: 10%;
+  justify-content: flex-end;
+  justify-content: center;
+}
+.main-content-container header .signout-container .sign-out-button {
+  padding: 10px 20px;
+  background-color: #4691DD;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Lilita One", sans-serif;
+}
+.main-content-container .bottom-content-container {
+  display: flex;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+.main-content-container .bottom-content-container .filter-dropdown-overlay {
+  background: #0F0F0F;
+}
+.main-content-container .bottom-content-container .filter-dropdown-overlay .filter-options {
+  border: none;
+  width: 100%;
+}
+.main-content-container .bottom-content-container .filter-dropdown-overlay .filter-options button {
+  width: 80%;
+  padding: 10px;
+  background: #4691DD;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Lilita One", sans-serif;
+  font-size: 20px;
+}
+.main-content-container .bottom-content-container .filter-dropdown-overlay .filter-options h3 {
+  color: #4691DD;
+  font-family: "League Gothic", sans-serif;
+  font-size: 24px;
+}
+.main-content-container .bottom-content-container nav,
+.main-content-container .bottom-content-container .filter-options {
+  height: 100%;
+  width: 10%;
+  border-right: 1px solid #D7D7D7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+.main-content-container .bottom-content-container nav::-webkit-scrollbar,
+.main-content-container .bottom-content-container .filter-options::-webkit-scrollbar {
+  width: 3px;
+}
+.main-content-container .bottom-content-container nav::-webkit-scrollbar-thumb,
+.main-content-container .bottom-content-container .filter-options::-webkit-scrollbar-thumb {
+  background: #4691DD;
+  border-radius: 6px;
+}
+.main-content-container .bottom-content-container nav::-webkit-scrollbar-track,
+.main-content-container .bottom-content-container .filter-options::-webkit-scrollbar-track {
+  background: transparent;
+}
+.main-content-container .bottom-content-container nav:not(:hover)::-webkit-scrollbar-thumb,
+.main-content-container .bottom-content-container .filter-options:not(:hover)::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.main-content-container .bottom-content-container nav .nav-name,
+.main-content-container .bottom-content-container .filter-options .nav-name {
+  font-size: 24px;
+  font-weight: 500;
+  color: #4691DD;
+  font-family: "League Gothic", sans-serif;
+  width: 80%;
+}
+.main-content-container .bottom-content-container nav .reset-button,
+.main-content-container .bottom-content-container .filter-options .reset-button {
+  padding: 10px 20px;
+  background-color: #4691DD;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Lilita One", sans-serif;
+}
+.main-content-container .bottom-content-container nav .filter,
+.main-content-container .bottom-content-container .filter-options .filter {
+  width: 80%;
+}
+.main-content-container .bottom-content-container nav .filter .dropdown .dropdown-menu,
+.main-content-container .bottom-content-container .filter-options .filter .dropdown .dropdown-menu {
+  list-style-type: none;
+  border-left: 1px solid #D7D7D7;
+  border-right: 1px solid #D7D7D7;
+  border-bottom: 1px solid #D7D7D7;
+}
+.main-content-container .bottom-content-container nav .filter .dropdown .dropdown-menu .dropdown-item,
+.main-content-container .bottom-content-container .filter-options .filter .dropdown .dropdown-menu .dropdown-item {
+  padding: 10px;
+  color: #D7D7D7;
+  border-bottom: 1px solid #D7D7D7;
+  cursor: pointer;
+  font-family: "League Gothic", sans-serif;
+  font-size: 20px;
+}
+.main-content-container .bottom-content-container nav .filter .dropdown .dropdown-menu .dropdown-item:hover,
+.main-content-container .bottom-content-container .filter-options .filter .dropdown .dropdown-menu .dropdown-item:hover {
+  background: #4691DD;
+}
+.main-content-container .bottom-content-container nav .filter .dropdown .dropdown-arrow,
+.main-content-container .bottom-content-container .filter-options .filter .dropdown .dropdown-arrow {
+  width: 20px;
+  height: 20px;
+}
+.main-content-container .bottom-content-container nav .filter button,
+.main-content-container .bottom-content-container .filter-options .filter button {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  color: #D7D7D7;
+  border: none;
+  border: 1.5px solid #9C9C9C;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+  font-family: "League Gothic", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.main-content-container .bottom-content-container main {
+  width: 90%;
+  min-height: calc(100vh - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-content-container .bottom-content-container main .no-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 500;
+  color: #4691DD;
+  font-family: "League Gothic", sans-serif;
+}
+.main-content-container .bottom-content-container main .no-content p {
+  text-align: center;
+}
+.main-content-container .bottom-content-container main::-webkit-scrollbar {
+  width: 3px;
+}
+.main-content-container .bottom-content-container main::-webkit-scrollbar-thumb {
+  background: #4691DD;
+  border-radius: 6px;
+}
+.main-content-container .bottom-content-container main::-webkit-scrollbar-track {
+  background: transparent;
+}
+.main-content-container .bottom-content-container main:not(:hover)::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.main-content-container .bottom-content-container main .loading-videos {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-content-container .bottom-content-container main .video-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 5px;
+  flex-direction: column;
+}
+.main-content-container .bottom-content-container main .video-section h2 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #9C9C9C;
+  font-family: "League Gothic", sans-serif;
+  align-self: flex-start;
+}
+.main-content-container .bottom-content-container main .video-section h2 .carousel-outer {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 1rem 0;
+}
+.main-content-container .bottom-content-container main .video-section h2 .carousel-inner {
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 2;
+}
+.main-content-container .bottom-content-container main .content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-content-container .bottom-content-container main .content-header h2 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #9C9C9C;
+  font-family: "League Gothic", sans-serif;
+}
+.main-content-container .bottom-content-container main .content-header .add-movie-button {
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Lilita One", sans-serif;
+}
+.main-content-container .bottom-content-container main .videoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "League Gothic", sans-serif;
+  width: 350px;
+  height: 820px;
+  position: relative;
+}
+.main-content-container .bottom-content-container main .videoCard .delete-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+}
+.main-content-container .bottom-content-container main .videoCard .delete-btn img {
+  width: 20px;
+  height: 20px;
+}
+.main-content-container .bottom-content-container main .videoCard .poster {
+  border-radius: 5px;
+  height: 440px;
+}
+.main-content-container .bottom-content-container main .videoCard .videoCard-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.main-content-container .bottom-content-container main .videoCard .videoCard-info h3 {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+.main-content-container .bottom-content-container main .videoCard .videoCard-info .add-movie {
+  border: none;
+  width: 80%;
+  padding: 10px;
+  align-self: center;
+  font-family: "Lilita One", sans-serif;
+  background-color: #4691DD;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  height: 40px;
+}
+.main-content-container .bottom-content-container main .videoCard .videoCard-info .add-movie .animated-video-add-btn {
+  position: absolute !important;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.main-content-container .bottom-content-container main .videoCard .videoCard-info .personal-rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.main-content-container .bottom-content-container main .videoCard .videoCard-info .personal-rating-container .rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: right;
+}
+.main-content-container .bottom-content-container main .videoCard .videoCard-info .personal-rating-container .rating-container .rating {
+  gap: 5px;
+  display: flex;
+}
+.main-content-container .bottom-content-container main .videoCard .videoCard-info .personal-rating-container .rating-container .rating img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.main-content-container .bottom-content-container main .videoCard .videoCard-info .personal-rating-container .animated-btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-content-container .bottom-content-container main .videoCard .video-title {
+  font-size: 24px;
+  font-weight: 500;
+}
+.main-content-container .bottom-content-container main .videoCard .description-container {
+  flex: 1 1 auto;
+  width: 100%;
+  overflow: auto;
+  margin-top: 8px;
+}
+.main-content-container .bottom-content-container main .videoCard .description-container .description {
+  font-size: 18px;
+  line-height: 1.3;
+  max-height: 100px;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+.main-content-container .bottom-content-container main .videoCard .video-thumbnail {
+  width: 100%;
+  height: auto;
+}
+.main-content-container .bottom-content-container main .videoCard .imdb-rating-container {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content-container .bottom-content-container main .videoCard .imdb-rating-container .rating-container .rating {
+  gap: 5px;
+  display: flex;
+}
+.main-content-container .bottom-content-container main .videoCard .imdb-rating-container .rating-container .rating img {
+  width: 20px;
+  height: 20px;
+}
+.main-content-container .bottom-content-container .mobile-nav-container {
+  display: flex;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #D7D7D7;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: #0F0F0F;
+  z-index: 200;
+}
+.main-content-container .bottom-content-container .mobile-nav-container .filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  border-bottom: 1px solid #D7D7D7;
+}
+.main-content-container .bottom-content-container .mobile-nav-container .filter-container .filter-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.main-content-container .bottom-content-container .mobile-nav-container .filter-container .dropdown-arrow {
+  width: 20px;
+  height: 20px;
+}
+.main-content-container .bottom-content-container .mobile-nav-container .filter-container h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  font-family: "League Gothic", sans-serif;
+  width: 80%;
+  margin-left: 5px;
+}
+.main-content-container .bottom-content-container .mobile-nav-container .search-container {
+  display: flex;
+  width: 80%;
+  position: relative;
+  height: 60px;
+  border-bottom: 1px solid #D7D7D7;
+}
+.main-content-container .bottom-content-container .mobile-nav-container .search-container .search-button {
+  padding: 10px;
+  color: #fff;
+  background: #0F0F0F;
+  border: none;
+  cursor: pointer;
+  font-family: "Lilita One", sans-serif;
+  font-size: 18px;
+}
+.main-content-container .bottom-content-container .mobile-nav-container .search-container .reset-button {
+  padding: 10px;
+  color: #fff;
+  border: none;
+  background: #0F0F0F;
+  cursor: pointer;
+  font-family: "Lilita One", sans-serif;
+  font-size: 18px;
+}
+.main-content-container .bottom-content-container .mobile-nav-container .search-container .search-input {
+  width: 70%;
+  padding: 10px;
+  padding-left: 36px;
+  border: none;
+  font-size: 22px;
+  background: none;
+  color: white;
+  font-family: "League Gothic", sans-serif;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+.main-content-container .bottom-content-container .mobile-nav-container .search-container .search-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.main-content-container .bottom-content-container .mobile-nav-container .search-container .search-input::-moz-placeholder {
+  color: #9C9C9C;
+  opacity: 1;
+}
+.main-content-container .bottom-content-container .mobile-nav-container .search-container .search-input::placeholder {
+  color: #9C9C9C;
+  opacity: 1;
+}
+.main-content-container .bottom-content-container .mobile-nav-container .search-container .search-icon {
+  position: absolute;
+  top: 30%;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1650px) {
+  header .app-name-container {
+    width: 15% !important;
+  }
+  header .search-container {
+    width: 70% !important;
+  }
+  header .signout-container {
+    width: 15% !important;
+  }
+  nav {
+    width: 15% !important;
+  }
+  main {
+    width: 85% !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  header .app-name-container {
+    width: 20% !important;
+  }
+  header .search-container {
+    width: 60% !important;
+  }
+  header .search-container .search-input {
+    width: 50% !important;
+  }
+  header .signout-container {
+    width: 20% !important;
+  }
+  nav {
+    width: 20% !important;
+  }
+  main {
+    width: 80% !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  header .app-name-container {
+    width: 25% !important;
+  }
+  header .app-name-container .app-name {
+    font-size: 20px;
+  }
+  header .search-container {
+    width: 50% !important;
+  }
+  header .search-container .search-input {
+    width: 60% !important;
+  }
+  header .signout-container {
+    width: 25% !important;
+  }
+  nav {
+    width: 25% !important;
+  }
+  main {
+    width: 75% !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  header {
+    justify-content: space-between !important;
+  }
+  header .app-name-container {
+    width: 45% !important;
+  }
+  header .app-name-container .app-name {
+    font-size: 18px;
+  }
+  header .signout-container {
+    width: 30% !important;
+  }
+  header .search-container {
+    width: 0% !important;
+  }
+  header .search-container .search-button {
+    display: none;
+  }
+  header .search-container .search-input {
+    display: none;
+  }
+  header .search-container .search-icon {
+    display: none;
+  }
+  header .search-container .clear-button {
+    display: none;
+  }
+  nav {
+    display: none !important;
+  }
+  main {
+    width: 100% !important;
+    height: auto !important;
+    padding: 50px 0px !important;
+  }
+  main .video-section {
+    padding: 20px 30px !important;
+  }
+  main .content-header {
+    margin-left: 40px !important;
+    margin-top: 20px !important;
+  }
+  main .videoCard {
+    align-self: center !important;
+    margin-bottom: 200px !important;
+  }
+}/*# sourceMappingURL=main.styles.css.map */

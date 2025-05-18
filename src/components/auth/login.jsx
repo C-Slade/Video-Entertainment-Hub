@@ -24,7 +24,7 @@ const Login = () => {
       await signIn(email, password);
     } catch (error) {
       setToast({
-        show: false,
+        show: true,
         message: "There was an error logging in. Please try again.",
         type: "error",
       });

@@ -1,0 +1,610 @@
+@import "../../../styles/variables/style-variables.sass"
+    
+.main-content-container
+    display: flex
+    flex-direction: column
+    width: 100%
+    min-height: 100vh
+    overflow: hidden
+
+    header 
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 60px
+        border-bottom: 1px solid #D7D7D7
+        z-index: 300 !important
+        background: $bg-color
+
+        .app-name-container
+            display: flex
+            align-items: center
+            width: 10%
+            justify-content: center
+
+            .app-name
+                font-size: 24px
+                font-weight: 500
+                color: $main-color
+                font-family: "League Gothic", sans-serif
+
+        .search-container
+            display: flex
+            align-items: center
+            width: 80%
+            position: relative
+            align-items: center
+
+            .clear-button
+                padding: 10px
+                color: #fff
+                background: $bg-color
+                border: none
+                cursor: pointer
+                font-family: "Lilita One", sans-serif
+
+            .search-input
+                width: 25%
+                padding: 5px
+                border-radius: 5px
+                border: 1px solid #D7D7D7
+                font-size: 22px
+                background: none
+                color: white
+                font-family: "League Gothic", sans-serif
+                padding-left: 36px
+                
+                &::placeholder
+                    color: $secondary-dark-color
+                    opacity: 1
+
+            .search-icon
+                position: absolute
+                left: 10px
+                width: 20px
+                height: 20px
+                pointer-events: none
+                
+
+            .search-button
+                padding: 10px 20px
+                margin-left: 10px
+                background-color: $main-color
+                color: #fff
+                border: none
+                border-radius: 5px
+                cursor: pointer
+                font-family: "Lilita One", sans-serif
+
+            
+        .signout-container
+            display: flex
+            align-items: center
+            width: 10%
+            justify-content: flex-end
+            justify-content: center
+
+            .sign-out-button
+                padding: 10px 20px
+                background-color: $main-color
+                color: #fff
+                border: none
+                border-radius: 5px
+                cursor: pointer
+                font-family: "Lilita One", sans-serif
+
+    .bottom-content-container
+        display: flex
+        height: calc(100vh - 60px)
+        overflow: hidden
+
+        .filter-dropdown-overlay
+            background: $bg-color
+
+            .filter-options
+                border: none
+                width: 100%
+
+                button
+                    width: 80%
+                    padding: 10px
+                    background: $main-color
+                    color: #fff
+                    border: none
+                    border-radius: 5px
+                    cursor: pointer
+                    font-family: "Lilita One", sans-serif
+                    font-size: 20px
+
+                h3 
+                    color: $main-color
+                    font-family: "League Gothic", sans-serif
+                    font-size: 24px
+
+        nav,
+        .filter-options
+            height: 100%
+            width: 10%
+            border-right: 1px solid #D7D7D7
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 20px
+            padding-top: 20px
+            overflow-y: auto
+
+            &::-webkit-scrollbar
+                width: 3px
+
+            &::-webkit-scrollbar-thumb
+                background: $main-color
+                border-radius: 6px
+
+            &::-webkit-scrollbar-track
+                background: transparent
+
+            &:not(:hover)
+                &::-webkit-scrollbar-thumb
+                    background: transparent
+
+            .nav-name
+                font-size: 24px
+                font-weight: 500
+                color: $main-color
+                font-family: "League Gothic", sans-serif
+                width: 80%
+
+            .reset-button
+                padding: 10px 20px
+                background-color: $main-color
+                color: #fff
+                border: none
+                border-radius: 5px
+                cursor: pointer
+                font-family: "Lilita One", sans-serif
+
+            .filter 
+                width: 80%
+
+                .dropdown
+                    .dropdown-menu
+                        list-style-type: none
+                        border-left: 1px solid #D7D7D7
+                        border-right: 1px solid #D7D7D7
+                        border-bottom: 1px solid #D7D7D7
+
+                        .dropdown-item
+                            padding: 10px
+                            color: #D7D7D7
+                            border-bottom: 1px solid #D7D7D7
+                            cursor: pointer
+                            font-family: "League Gothic", sans-serif
+                            font-size: 20px
+
+                            &:hover
+                                background: $main-color
+                    .dropdown-arrow
+                        width: 20px
+                        height: 20px
+
+                button
+                    width: 100%
+                    padding: 10px
+                    background: transparent
+                    color: #D7D7D7
+                    border: none
+                    border: 1.5px solid $secondary-dark-color
+                    border-top-left-radius: 5px
+                    border-top-right-radius: 5px
+                    cursor: pointer
+                    font-family: "League Gothic", sans-serif
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    font-size: 20px
+
+        main 
+            width: 90%
+            min-height: calc(100vh - 60px)
+            overflow-y: auto
+            overflow-x: hidden
+            padding: 20px
+            display: flex
+            flex-direction: column
+            gap: 20px
+
+            .no-content
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column
+                width: 100%
+                height: 100%
+                font-size: 24px
+                font-weight: 500
+                color: $main-color
+                font-family: "League Gothic", sans-serif
+
+                p 
+                    text-align: center
+
+            &::-webkit-scrollbar
+                width: 3px
+
+            &::-webkit-scrollbar-thumb
+                background: $main-color
+                border-radius: 6px
+
+            &::-webkit-scrollbar-track
+                background: transparent
+
+            &:not(:hover)
+                &::-webkit-scrollbar-thumb
+                    background: transparent
+
+            .loading-videos
+                height: 100%
+                width: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+
+            .video-section
+                display: flex
+                gap: 10px
+                align-items: center
+                width: 100%
+                padding: 20px 30px
+                border-radius: 5px
+                flex-direction: column
+
+                h2 
+                    font-size: 28px
+                    font-weight: 500
+                    color: $secondary-dark-color
+                    font-family: "League Gothic", sans-serif
+                    align-self: flex-start
+
+                    .carousel-outer 
+                        width: 100%
+                        overflow-x: hidden
+                        padding: 1rem 0
+
+                    .carousel-inner 
+                        display: flex
+                        user-select: none
+                        z-index: 2
+
+
+
+            .content-header
+                display: flex
+                justify-content: space-between
+                align-items: center
+
+                h2 
+                    font-size: 28px
+                    font-weight: 500
+                    color: $secondary-dark-color
+                    font-family: "League Gothic", sans-serif
+
+                .add-movie-button
+                    padding: 10px 20px
+                    color: #fff
+                    border: none
+                    border-radius: 5px
+                    cursor: pointer
+                    font-family: "Lilita One", sans-serif
+
+            .videoCard
+                display: flex
+                flex-direction: column
+                gap: 10px
+                padding: 20px
+                border-radius: 5px
+                color: #fff
+                font-family: "League Gothic", sans-serif
+                width: 350px
+                height: 820px
+                position: relative
+
+                .delete-btn
+                    position: absolute
+                    top: -10px
+                    right: -10px
+                    cursor: pointer
+
+                    img 
+                        width: 20px
+                        height: 20px
+
+                .poster 
+                    border-radius: 5px
+                    height: 440px
+
+                .videoCard-info
+                    display: flex
+                    flex-direction: column
+                    gap: 25px
+
+                    h3 
+                        font-size: 20px
+                        font-weight: 500
+                        text-align: center
+
+                    .add-movie
+                        border: none
+                        width: 80%
+                        padding: 10px
+                        align-self: center
+                        font-family: "Lilita One", sans-serif
+                        background-color: $main-color
+                        color: #fff
+                        font-size: 20px
+                        border-radius: 5px
+                        position: relative
+                        cursor: pointer
+                        height: 40px
+
+                        .animated-video-add-btn
+                            position: absolute !important
+                            height: 100%
+                            width: 100%
+                            top: 0
+                            left: 0
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            position: relative
+
+                    .personal-rating-container
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        width: 100%
+
+
+                        .rating-container
+                            display: flex
+                            justify-content: space-between
+                            align-items: center
+                            justify-content: right
+
+                            .rating
+                                gap: 5px
+                                display: flex
+                                
+                                img 
+                                    width: 20px
+                                    height: 20px
+                                    cursor: pointer
+
+                        .animated-btn
+                            width: 100%
+                            height: 100%
+                            position: absolute
+                            top: 0
+                            left: 0
+                            display: flex
+                            justify-content: center
+                            align-items: center
+
+
+
+                .video-title
+                    font-size: 24px
+                    font-weight: 500
+
+                .description-container
+                    flex: 1 1 auto
+                    width: 100%
+                    overflow: auto
+                    margin-top: 8px
+
+                    .description
+                        font-size: 18px
+                        line-height: 1.3
+                        max-height: 100px
+                        overflow: hidden
+                        -webkit-line-clamp: 5
+                        -webkit-box-orient: vertical
+
+                .video-thumbnail
+                    width: 100%
+                    height: auto
+
+                .imdb-rating-container
+                    display: flex
+                    justify-content: space-between
+
+                    .rating-container
+                        .rating 
+                            gap: 5px
+                            display: flex
+                            img 
+                                width: 20px
+                                height: 20px
+
+        .mobile-nav-container
+            display: flex
+            position: absolute
+            top: 60px
+            left: 0
+            width: 100%
+            border-top: 1px solid #D7D7D7
+            justify-content: space-between
+            padding: 0 20px
+            background: $bg-color
+            z-index: 200
+
+            .filter-container
+                display: flex
+                align-items: center
+                justify-content: space-between
+                width: 50%
+                border-bottom: 1px solid #D7D7D7
+
+                .filter-icon 
+                    width: 20px
+                    height: 20px
+                    cursor: pointer
+
+                .dropdown-arrow
+                    width: 20px
+                    height: 20px
+
+                h4 
+                    font-size: 20px
+                    font-weight: 500
+                    color: #fff
+                    font-family: "League Gothic", sans-serif
+                    width: 80%
+                    margin-left: 5px
+
+            .search-container
+                display: flex
+                width: 80%
+                position: relative
+                height: 60px
+                border-bottom: 1px solid #D7D7D7
+
+                .search-button
+                    padding: 10px
+                    color: #fff
+                    background: $bg-color
+                    border: none
+                    cursor: pointer
+                    font-family: "Lilita One", sans-serif
+                    font-size: 18px
+
+                .reset-button
+                    padding: 10px
+                    color: #fff
+                    border: none
+                    background: $bg-color
+                    cursor: pointer
+                    font-family: "Lilita One", sans-serif
+                    font-size: 18px
+
+                .search-input
+                    width: 70%
+                    padding: 10px
+                    padding-left: 36px
+                    border: none
+                    font-size: 22px
+                    background: none
+                    color: white
+                    font-family: "League Gothic", sans-serif
+                    -webkit-appearance: none
+                    border-radius: 0
+                
+                    &:focus
+                        outline: none
+                        box-shadow: none
+                    
+                    &::placeholder
+                        color: $secondary-dark-color
+                        opacity: 1
+
+                .search-icon
+                    position: absolute
+                    top: 30%
+                    left: 10px
+                    width: 20px
+                    height: 20px
+                    pointer-events: none
+
+@media screen and (max-width: $large-Screen)
+    header 
+        .app-name-container
+            width: 15% !important
+        .search-container
+            width: 70% !important
+        .signout-container
+            width: 15% !important
+    nav 
+        width: 15% !important
+    main
+        width: 85% !important
+
+@media screen and (max-width: $medium-Screen)
+    header 
+        .app-name-container
+            width: 20% !important
+        .search-container
+            width: 60% !important
+            .search-input
+                width: 50% !important
+        .signout-container
+            width: 20% !important
+        
+    nav 
+        width: 20% !important
+    main
+        width: 80% !important
+
+@media screen and (max-width: $small-Screen)
+    header 
+        .app-name-container
+            width: 25% !important
+            .app-name
+                font-size: 20px
+        .search-container
+            width: 50% !important
+            .search-input
+                width: 60% !important
+        .signout-container
+            width: 25% !important
+        
+    nav 
+        width: 25% !important
+    main
+        width: 75% !important
+
+@media screen and (max-width: $extra-small-Screen)
+    header 
+        justify-content: space-between !important
+        .app-name-container
+            width: 45% !important
+            .app-name
+                font-size: 18px
+        .signout-container
+            width: 30% !important
+        .search-container
+            width: 0% !important
+            .search-button
+                display: none
+            .search-input
+                display: none
+            .search-icon
+                display: none
+            .clear-button
+                display: none 
+
+    nav
+        display: none !important
+
+    main
+        width: 100% !important
+        height: auto !important
+        padding: 50px 0px !important
+
+        .video-section
+            padding: 20px 30px !important
+
+        .content-header
+            margin-left: 40px !important
+            margin-top: 20px !important
+
+        .videoCard
+            align-self: center !important
+            margin-bottom: 200px !important
+
+
+
+    
+                            
+                
+
+
+

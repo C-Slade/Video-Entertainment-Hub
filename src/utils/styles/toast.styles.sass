@@ -1,3 +1,5 @@
+@import "../../styles/variables/style-variables.sass"
+    
 .toast
     position: absolute
     bottom: 25px
@@ -11,9 +13,10 @@
     padding: 16px
     margin-bottom: 15px
     border-radius: 5px
-    font-size: 22px
+    font-size: 24px
     text-align: center
     z-index: 9999
+    background-color: $bg-color
     
 
     img 
@@ -23,5 +26,7 @@
     
 .toast-success
     border: 1px solid #00ba00
+    background: #004a00
 .toast-error
     border: 1px solid #ff0000
+    background: #470000
